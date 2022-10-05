@@ -50,6 +50,10 @@ keymap("i", "jk", "<ESC>", opts)
 keymap("v", "<", "<gv", opts)
 keymap("v", ">", ">gv", opts)
 
+-- Move text
+keymap("x", "<M-j>", ":move '>+1<CR>gv-gv", opts)
+keymap("x", "<M-k>", ":move '<-2<CR>gv-gv", opts)
+
 -- Plugins --
 
 -- Telescope
