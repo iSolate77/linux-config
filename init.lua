@@ -1,5 +1,8 @@
-require "user.options"
-require "user.plugins"
-require "user.colourscheme"
-require "user.keymaps"
-require "user.lsp"
+require("user.options")
+require("user.plugins")
+require("user.colourscheme")
+require("user.keymaps")
+require("user.lsp")
+require("user.lualine")
+require("user.gitstrings")
+require("user.telescope")
