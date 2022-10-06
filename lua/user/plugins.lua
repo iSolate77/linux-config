@@ -46,6 +46,17 @@ return packer.startup(function(use)
   use "nvim-lua/plenary.nvim"
   use "RRethy/vim-illuminate"
 
+  -- Completions
+  use "hrsh7th/nvim-cmp"
+  use "hrsh7th/cmp-buffer"
+  use "hrsh7th/cmp-path"
+  use "hrsh7th/cmp-nvim-lua"
+  use "hrsh7th/cmp-nvim-lsp"
+
+  -- Snippets
+  use "L3MON4D3/LuaSnip"
+  use "onsails/lspkind-nvim"
+
   -- Telescope
   use "nvim-telescope/telescope.nvim"
 
