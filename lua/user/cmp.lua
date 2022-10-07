@@ -10,6 +10,8 @@ require("luasnip/loaders/from_vscode").lazy_load()
 local cmp = require("cmp")
 cmp.setup({
 	mapping = {
+		["<C-j>"] = cmp.mapping.select_next_item(),
+		["<C-k>"] = cmp.mapping.select_prev_item(),
 		["<C-d>"] = cmp.mapping.scroll_docs(-4),
 		["<C-f>"] = cmp.mapping.scroll_docs(4),
 		["<C-e>"] = cmp.mapping.close(),
