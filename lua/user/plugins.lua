@@ -69,6 +69,7 @@ return packer.startup(function(use)
   use "saadparwaiz1/cmp_luasnip" -- snippet completions
   use "hrsh7th/cmp-nvim-lsp"
   use "hrsh7th/cmp-nvim-lua"
+  use "onsails/lspkind-nvim"
 
   -- snippets
   use "L3MON4D3/LuaSnip" --snippet engine
@@ -76,9 +77,9 @@ return packer.startup(function(use)
 
   -- LSP
   use "neovim/nvim-lspconfig" -- enable LSP
-  use "williamboman/nvim-lsp-installer" -- simple to use language server installer
-  --[[ use "williamboman/mason.nvim" ]]
-  --[[ use "williamboman/mason-lspconfig.nvim" ]]
+  --[[ use "williamboman/nvim-lsp-installer" -- simple to use language server installer ]]
+  use "williamboman/mason.nvim"
+  use "williamboman/mason-lspconfig.nvim"
   use "jose-elias-alvarez/null-ls.nvim" -- for formatters and linters
   use "RRethy/vim-illuminate"
 
