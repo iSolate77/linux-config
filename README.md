@@ -1,4 +1,5 @@
-# A Basic Stable IDE config for Neovim
+# # Direct clone from @ChristianChiarulli basic IDE setup, with few tweaks from @TJDeVries
+## A Basic Stable IDE config for Neovim
 
 > Why does this repo exist?
 

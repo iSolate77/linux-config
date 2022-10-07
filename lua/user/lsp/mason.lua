@@ -66,4 +66,5 @@ for _, server in pairs(servers) do
   end
 
   lspconfig[server].setup(opts)
+  capabilities = capabilities
 end
