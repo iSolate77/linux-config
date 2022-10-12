@@ -28,8 +28,9 @@ cmp.setup({
 		{ name = "gh_issues" },
 		{ name = "nvim_lua" },
 		{ name = "path" },
+		{ name = "nvim_lsp_signature_help" },
 		{ name = "luasnip" },
-		{ name = "buffer", keyword_length = 3 },
+		{ name = "buffer", keyword_length = 5 },
 	}),
 	snippet = {
 		expand = function(args)
@@ -48,9 +49,9 @@ cmp.setup({
 				gh_issues = "[issues]",
 			},
 		}),
-	window = {
-		completion = cmp.config.window.bordered(),
-		documentation = cmp.config.window.bordered(),
-	},
+		window = {
+			completion = cmp.config.window.bordered(),
+			documentation = cmp.config.window.bordered(),
+		},
 	},
 })
