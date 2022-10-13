@@ -25,9 +25,9 @@ cmp.setup({
 		["<C-space>"] = cmp.mapping.complete(),
 	},
 	sources = cmp.config.sources({
-		{ name = "gh_issues" },
 		{ name = "nvim_lua" },
 		{ name = "path" },
+    { name = "nvim_lsp" },
 		{ name = "nvim_lsp_signature_help" },
 		{ name = "luasnip" },
 		{ name = "buffer", keyword_length = 5 },
@@ -46,12 +46,15 @@ cmp.setup({
 				nvim_lua = "[api]",
 				path = "[path]",
 				luasnip = "[snip]",
-				gh_issues = "[issues]",
 			},
 		}),
-		window = {
-			completion = cmp.config.window.bordered(),
-			documentation = cmp.config.window.bordered(),
-		},
 	},
+	window = {
+		completion = cmp.config.window.bordered(),
+		documentation = cmp.config.window.bordered(),
+	},
+  experimental = {
+    native_menu = false,
+    ghost_text = true,
+  }
 })

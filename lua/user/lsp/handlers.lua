@@ -53,7 +53,7 @@ M.setup = function()
 end
 
 local function lsp_keymaps()
-	local opts = { noremap = true, silent = true }
+	local opts = { noremap = true, silent = false }
 	local keymap = vim.keymap.set
 	keymap("n", "K", vim.lsp.buf.hover, { buffer = 0 }, opts)
 	keymap("n", "gd", vim.lsp.buf.definition, { buffer = 0 }, opts)
@@ -70,6 +70,8 @@ local function lsp_keymaps()
 	keymap("n", "<leader>lr", vim.lsp.buf.rename, { buffer = 0 }, opts)
 	keymap("n", "<leader>ls", vim.lsp.buf.signature_help, { buffer = 0 }, opts)
 	keymap("n", "<leader>lq", vim.diagnostic.setloclist, { buffer = 0 }, opts)
+	keymap("n", "<leader>lt", "<cmd>lua vim.diagnostic.config({ virtual_text = true })<CR>", opts)
+	keymap("n", "<leader>tl", "<cmd>lua vim.diagnostic.config({ virtual_text = false })<CR>", opts)
 end
 
 M.on_attach = function(client)
