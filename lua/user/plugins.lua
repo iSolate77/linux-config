@@ -56,6 +56,8 @@ return packer.startup(function(use)
 	use("lewis6991/impatient.nvim")
 	use("lukas-reineke/indent-blankline.nvim")
 	use("goolord/alpha-nvim")
+  use("ggandor/leap.nvim")
+  use("tpope/vim-repeat")
 
 	-- Colorschemes
 	use("folke/tokyonight.nvim")
@@ -95,7 +97,9 @@ return packer.startup(function(use)
 
 	-- DAP
 	use("mfussenegger/nvim-dap")
-	use({ "rcarriga/nvim-dap-ui", commit = "d76d6594374fb54abf2d94d6a320f3fd6e9bb2f7" })
+	use("rcarriga/nvim-dap-ui")
+  use("theHamsta/nvim-dap-virtual-text")
+  use("nvim-telescope/telescope-dap.nvim")
 	use("ravenxrz/DAPInstall.nvim")
 
 	-- QoL

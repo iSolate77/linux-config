@@ -8,7 +8,7 @@ if not status_cmp_ok then
 end
 
 M.capabilities.textDocument.completion.completionItem.snippetSupport = true
-M.capabilities = cmp_nvim_lsp.update_capabilities(M.capabilities)
+M.capabilities = cmp_nvim_lsp.default_capabilities(M.capabilities)
 
 M.setup = function()
 	local signs = {
@@ -63,7 +63,7 @@ local function lsp_keymaps()
 	keymap("n", "gt", vim.lsp.buf.type_definition, { buffer = 0 }, opts)
 	keymap("n", "<leader>lf", vim.lsp.buf.format, { buffer = 0 }, opts)
 	keymap("n", "<leader>li", "<cmd>LspInfo<cr>", opts)
-	keymap("n", "<leader>lI", "<cmd>LspInstallInfo<cr>", opts)
+	keymap("n", "<leader>lI", "<cmd>Mason<cr>", opts)
 	keymap("n", "<leader>la", vim.lsp.buf.code_action, { buffer = 0 }, opts)
 	keymap("n", "<leader>lj", vim.diagnostic.goto_next, { buffer = 0 }, opts)
 	keymap("n", "<leader>lk", vim.diagnostic.goto_prev, { buffer = 0 }, opts)

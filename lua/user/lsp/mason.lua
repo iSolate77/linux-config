@@ -6,6 +6,8 @@ local servers = {
 	"clangd",
 	"rust_analyzer",
 	"texlab",
+  "hls",
+  "taplo",
 }
 
 local settings = {
