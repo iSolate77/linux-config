@@ -52,6 +52,21 @@ M.setup = function()
 	})
 end
 
+local optss = {
+  tools = {
+    runnables = {
+      use_telescope = true,
+    },
+    inlay_hints = {
+      auto = true,
+      show_parameter_hints = false,
+      parameter_hints_prefix = "",
+      other_hints_prefix = "",
+    },
+  },
+}
+require("rust-tools").setup(optss)
+
 local function lsp_keymaps()
 	local opts = { noremap = true, silent = false }
 	local keymap = vim.keymap.set

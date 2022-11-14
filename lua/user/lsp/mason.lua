@@ -8,6 +8,9 @@ local servers = {
 	"texlab",
   "hls",
   "taplo",
+  "html",
+  "tsserver",
+  "marksman",
 }
 
 local settings = {

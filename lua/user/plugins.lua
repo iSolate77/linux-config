@@ -63,6 +63,7 @@ return packer.startup(function(use)
 	use("folke/tokyonight.nvim")
 	use("lunarvim/darkplus.nvim")
 	use("LunarVim/onedarker.nvim")
+  use("norcalli/nvim-colorizer.lua")
 
 	-- cmp plugins
 	use("hrsh7th/nvim-cmp") -- The completion plugin
@@ -85,6 +86,7 @@ return packer.startup(function(use)
 	use("williamboman/mason-lspconfig.nvim")
 	use("jose-elias-alvarez/null-ls.nvim") -- for formatters and linters
 	use("RRethy/vim-illuminate")
+  use("simrat39/rust-tools.nvim")
 
 	-- Telescope
 	use("nvim-telescope/telescope.nvim")
@@ -112,6 +114,9 @@ return packer.startup(function(use)
 			})
 		end,
 	})
+
+  use({ "iamcco/markdown-preview.nvim", run = "cd app && npm install", setup = function() vim.g.mkdp_filetypes = { "markdown" } end, ft = { "markdown" }, })
+
 	-- Automatically set up your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins
 	if PACKER_BOOTSTRAP then

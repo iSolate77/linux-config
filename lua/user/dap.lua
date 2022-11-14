@@ -18,6 +18,27 @@ dap_install.setup {}
 dap_install.config("python", {})
 -- add other configs here
 
+dap.adapters.cppdbg = {
+  id = 'cppdbg',
+  type = 'executable',
+  command = '/home/faris/.local/share/nvim/dapinstall/ccppr_vsc/extension/debugAdapters/bin/OpenDebugAD7',
+}
+
+dap.configurations.cpp = {
+  {
+    name = "Launch file",
+    type = "cppdbg",
+    request = "launch",
+    program = function()
+      return vim.fn.input('Path to executable: ', vim.fn.getcwd() .. '/', 'file')
+    end,
+    cwd = '${workspaceFolder}',
+    stopAtEntry = true,
+  }
+}
+dap.configurations.rust = dap.configurations.cpp
+dap.configurations.c = dap.configurations.cpp
+
 
 dapui.setup {
   layouts = {
