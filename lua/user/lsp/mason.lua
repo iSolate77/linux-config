@@ -10,7 +10,8 @@ local servers = {
   "taplo",
   "html",
   "tsserver",
-  "marksman",
+  "emmet_ls",
+  "cssls",
 }
 
 local settings = {

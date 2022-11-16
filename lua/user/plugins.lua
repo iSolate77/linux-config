@@ -56,14 +56,16 @@ return packer.startup(function(use)
 	use("lewis6991/impatient.nvim")
 	use("lukas-reineke/indent-blankline.nvim")
 	use("goolord/alpha-nvim")
-  use("ggandor/leap.nvim")
-  use("tpope/vim-repeat")
+	use("ggandor/leap.nvim")
+	use("tpope/vim-repeat")
 
 	-- Colorschemes
 	use("folke/tokyonight.nvim")
 	use("lunarvim/darkplus.nvim")
 	use("LunarVim/onedarker.nvim")
-  use("norcalli/nvim-colorizer.lua")
+	use("ful1e5/onedark.nvim")
+	use("norcalli/nvim-colorizer.lua")
+	use("marko-cerovac/material.nvim")
 
 	-- cmp plugins
 	use("hrsh7th/nvim-cmp") -- The completion plugin
@@ -73,7 +75,7 @@ return packer.startup(function(use)
 	use("hrsh7th/cmp-nvim-lsp")
 	use("hrsh7th/cmp-nvim-lua")
 	use("onsails/lspkind-nvim")
-  use("hrsh7th/cmp-nvim-lsp-signature-help")
+	use("hrsh7th/cmp-nvim-lsp-signature-help")
 
 	-- snippets
 	use("L3MON4D3/LuaSnip") --snippet engine
@@ -86,7 +88,7 @@ return packer.startup(function(use)
 	use("williamboman/mason-lspconfig.nvim")
 	use("jose-elias-alvarez/null-ls.nvim") -- for formatters and linters
 	use("RRethy/vim-illuminate")
-  use("simrat39/rust-tools.nvim")
+	use("simrat39/rust-tools.nvim")
 
 	-- Telescope
 	use("nvim-telescope/telescope.nvim")
@@ -100,8 +102,8 @@ return packer.startup(function(use)
 	-- DAP
 	use("mfussenegger/nvim-dap")
 	use("rcarriga/nvim-dap-ui")
-  use("theHamsta/nvim-dap-virtual-text")
-  use("nvim-telescope/telescope-dap.nvim")
+	use("theHamsta/nvim-dap-virtual-text")
+	use("nvim-telescope/telescope-dap.nvim")
 	use("ravenxrz/DAPInstall.nvim")
 
 	-- QoL
@@ -115,8 +117,9 @@ return packer.startup(function(use)
 		end,
 	})
 
-  use({ "iamcco/markdown-preview.nvim", run = "cd app && npm install", setup = function() vim.g.mkdp_filetypes = { "markdown" } end, ft = { "markdown" }, })
+	use({ "iamcco/markdown-preview.nvim" })
 
+	use("davidbeckingsale/writegood.vim")
 	-- Automatically set up your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins
 	if PACKER_BOOTSTRAP then
