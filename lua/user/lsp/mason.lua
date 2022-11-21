@@ -8,10 +8,9 @@ local servers = {
 	"texlab",
   "hls",
   "taplo",
-  "html",
   "tsserver",
+  "tailwindcss",
   "emmet_ls",
-  "cssls",
 }
 
 local settings = {
