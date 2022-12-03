@@ -64,7 +64,7 @@ return packer.startup(function(use)
 	use("lunarvim/darkplus.nvim")
 	use("LunarVim/onedarker.nvim")
 	-- use("ful1e5/onedark.nvim")
-  use("navarasu/onedark.nvim")
+	use("navarasu/onedark.nvim")
 	use("norcalli/nvim-colorizer.lua")
 	use("marko-cerovac/material.nvim")
 
@@ -119,8 +119,14 @@ return packer.startup(function(use)
 	})
 
 	use({ "iamcco/markdown-preview.nvim" })
-
 	use("davidbeckingsale/writegood.vim")
+	use({
+		"numToStr/Navigator.nvim",
+		config = function()
+			require("Navigator").setup()
+		end,
+	})
+
 	-- Automatically set up your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins
 	if PACKER_BOOTSTRAP then
